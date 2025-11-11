@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const testimonials = [
   {
-    quote: 'DreamLaunch turned our vision into a real, scalable product in record time.',
+    quote: 'BuildX Layer turned our vision into a real, scalable product in record time.',
     author: 'Sarah Patel — CEO, BrightEdge',
   },
   {
@@ -11,7 +11,7 @@ const testimonials = [
     author: 'Michael Reed — Co-Founder, NovaTech',
   },
   {
-    quote: 'Working with DreamLaunch felt effortless. They truly understand startups.',
+    quote: 'Working with BuildX Layer felt effortless. They truly understand startups.',
     author: 'Priya Nair — Product Head, Alpha Labs',
   },
 ];
