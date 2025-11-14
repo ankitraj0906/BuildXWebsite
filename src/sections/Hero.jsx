@@ -1,32 +1,89 @@
-import React from 'react';
-import {motion} from 'framer-motion';
+import React from "react";
+import { GridScan } from "../components/GridScan";
+import TiltedCard from "../components/TiltedCard";
 
-export default function Hero(){
-  return(
-    <section className="relative pt-32 pb-20 bg-gradient-to-b from-brandBlack via-[#111] to-brandBlack text-center overflow-hidden">
-      <motion.div
-        initial={{opacity:0,y:30}}
-        animate={{opacity:1,y:0}}
-        transition={{duration:1}}
-        className="relative z-10 px-6"
+// ✅ Import your three different images
+import image1 from "../assets/Tilted1.png";
+import image2 from "../assets/Tilted2.png";
+import image3 from "../assets/Tilted3.png";
+
+export default function Hero() {
+  return (
+    <div className="w-full h-screen flex items-center justify-center bg-black relative overflow-hidden">
+      {/* 🟡 Outer glowing oval container */}
+      <div
+        className="relative flex flex-row items-center justify-center text-center rounded-[60px] overflow-hidden shadow-[0_0_60px_rgba(245,179,0,0.4)] px-10"
+        style={{
+          width: "90%",
+          height: "80vh",
+          border: "2px solid #F5B300",
+          background: "rgba(0, 0, 0, 0.6)",
+        }}
       >
-        <p className="text-brandGold uppercase tracking-widest text-sm mb-3">Dream. Build. Launch</p>
-        <h1 className="text-5xl md:text-6xl font-extrabold text-white leading-tight">
-          Crafting Stunning Websites & Apps for Visionary Entrepreneurs
-        </h1>
-        <p className="mt-5 text-lg md:text-xl max-w-2xl mx-auto text-brandGray ">
-          Elevate your online presence with bespoke digital solutions tailored to your unique vision.
-        </p>
-        <div className="mt-10 flex justify0center gap-5">
-          <button className="btn-primary shadow-md shadow-brandGold/20">Work With Us</button>
-          <button className="px-6 py-3 rounded-full border border-gray-700 hover:border-brandGold transition-colors duration-300">
-            See Case Studies
-          </button>
+        {/* ✨ GridScan background */}
+        <div className="absolute inset-0 z-0">
+          <GridScan
+            sensitivity={0.0}
+            lineThickness={1}
+            linesColor="#F5B300"
+            gridScale={0.1}
+            scanColor="#FFD54F"
+            scanOpacity={0.0}
+            enablePost
+            bloomIntensity={0.0}
+            chromaticAberration={0.001}
+            noiseIntensity={0.0}
+          />
         </div>
-      </motion.div>
 
-      {/*Background Glow*/}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-brandGold/10 rounded-full blur-3xl"/>
-    </section>
+        {/* 🖼️ Three Tilted Cards */}
+        <div className="relative z-10 flex flex-row items-center justify-center gap-12">
+          <TiltedCard
+            imageSrc={image1}
+            altText="BuildX Card 1"
+            captionText=""
+            containerHeight="300px"
+            containerWidth="300px"
+            imageHeight="300px"
+            imageWidth="300px"
+            rotateAmplitude={12}
+            scaleOnHover={1.15}
+            showMobileWarning={false}
+            showTooltip={false}
+            displayOverlayContent={false}
+          />
+
+          <TiltedCard
+            imageSrc={image2}
+            altText="BuildX Card 2"
+            captionText=""
+            containerHeight="300px"
+            containerWidth="300px"
+            imageHeight="300px"
+            imageWidth="300px"
+            rotateAmplitude={12}
+            scaleOnHover={1.15}
+            showMobileWarning={false}
+            showTooltip={false}
+            displayOverlayContent={false}
+          />
+
+          <TiltedCard
+            imageSrc={image3}
+            altText="BuildX Card 3"
+            captionText=""
+            containerHeight="300px"
+            containerWidth="300px"
+            imageHeight="300px"
+            imageWidth="300px"
+            rotateAmplitude={12}
+            scaleOnHover={1.15}
+            showMobileWarning={false}
+            showTooltip={false}
+            displayOverlayContent={false}
+          />
+        </div>
+      </div>
+    </div>
   );
 }
