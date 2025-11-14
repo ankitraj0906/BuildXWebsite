@@ -5,7 +5,7 @@ import client from "../assets/Client.png";
 const testimonials = [
   {
     quote:
-      "DreamLaunch turned our vision into a real, scalable product in record time.",
+      "BuildX Layer turned our vision into a real, scalable product in record time.",
     author: "Sarah Patel — CEO, BrightEdge",
   },
   {
@@ -15,7 +15,7 @@ const testimonials = [
   },
   {
     quote:
-      "Working with DreamLaunch felt effortless. They truly understand startups.",
+      "Working with BuildXLayer felt effortless. They truly understand startups.",
     author: "Priya Nair — Product Head, Alpha Labs",
   },
 ];
